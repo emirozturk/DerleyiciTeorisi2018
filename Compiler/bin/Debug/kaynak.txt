@@ -1,0 +1,19 @@
+Eklenti io
+Fonk main()
+{
+    a = 3.0
+    b = "deneme"
+    c = (3 * 5 + 2)
+    d = a + c
+    Eger (a < c)
+        ekranaYaz(a,c)
+    YaDa (a > c)
+        ekranaYaz(2,3)	
+    Degilse
+        ekranaYaz(1,2)
+    EgerSonu
+}
+Fonk ekranaYaz(sayi1,sayi2)
+{
+    yazdir(sayi1+sayi2)
+}
