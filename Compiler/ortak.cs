@@ -37,7 +37,7 @@ namespace Compiler
     public class Token
     {
         public Tokenlar tur { get; set; }
-        string deger { get; set; }
+        public string deger { get; set; }
         public Token(Tokenlar tur, string deger)
         {
             this.tur = tur;

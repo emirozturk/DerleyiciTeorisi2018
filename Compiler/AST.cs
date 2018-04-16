@@ -100,6 +100,14 @@ namespace Compiler
             this.deger = deger;
         }
     }
+    class Tanim : Ifade
+    {
+        string deger;
+        public Tanim(string deger)
+        {
+            this.deger = deger;
+        }
+    }
     class MatematikIfadesi : Ifade
     {
         Ifade solIfade;
