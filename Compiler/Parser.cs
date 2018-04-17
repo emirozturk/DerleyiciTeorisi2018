@@ -12,6 +12,7 @@ namespace Compiler
         Blok suAnkiBlok = null;
         Stack<Blok> blokStack = new Stack<Blok>();
         List<Durum> agac = new List<Durum>();
+        List<string> eklentiler = new List<string>();
         public Parser(TokenListesi tl)
         {
             this.tl = tl;
@@ -80,37 +81,129 @@ namespace Compiler
 
         private DegilseBlogu degilseParseEt()
         {
-            throw new NotImplementedException();
+            return new DegilseBlogu();
         }
 
         private YaDaBlogu yaDaParseEt()
         {
-            throw new NotImplementedException();
+            tl.IleriGit();
+            Ifade solIfade = ifadeParseEt();
+            Tokenlar islem = tl.TokenAl().tur;
+            Ifade sagIfade = ifadeParseEt();
+            tl.IleriGit();
+            return new YaDaBlogu(solIfade, islem, sagIfade);
         }
 
         private EgerBlogu egerParseEt()
         {
-            throw new NotImplementedException();
+            tl.IleriGit();
+            Ifade solIfade = ifadeParseEt();
+            Tokenlar islem = tl.TokenAl().tur;
+            Ifade sagIfade = ifadeParseEt();
+            tl.IleriGit();
+            return new EgerBlogu(solIfade, islem, sagIfade);
         }
 
         private Cagirma cagirmaParseEt()
         {
-            throw new NotImplementedException();
+            string ad = tl.TokenAl().deger;
+            tl.IleriGit();
+            List<Ifade> argumanlar = new List<Ifade>();
+            if (tl.Gozat().tur == Tokenlar.ParantezKapat)
+                argumanlar = argumanParseEt();
+            return new Cagirma(ad, argumanlar);
+        }
+
+        private List<Ifade> argumanParseEt()
+        {
+            List<Ifade> argumanlar = new List<Ifade>();
+            while (true)
+            {
+                argumanlar.Add(ifadeParseEt());
+                if (tl.Gozat().tur == Tokenlar.Virgul)
+                    tl.IleriGit();
+                else if (tl.Gozat().tur == Tokenlar.ParantezKapat)
+                {
+                    tl.IleriGit();
+                    break;
+                }
+            }
+            return argumanlar;
         }
 
         private Atama atamaParseEt()
         {
-            throw new NotImplementedException();
+            string ad = tl.TokenAl().deger;
+            tl.IleriGit();
+            Ifade ifade = ifadeParseEt();
+            return new Atama(ad, ifade);
+        }
+
+        private Ifade ifadeParseEt()
+        {
+            Ifade donus = null;
+            Token t = tl.TokenAl();
+            if (t.tur == Tokenlar.TamSayi)
+                donus = new Tamsayi(Convert.ToInt32(t.deger));
+            else if (t.tur == Tokenlar.OndalikliSayi)
+                donus = new OndalikliSayi(Convert.ToDouble(t.deger));
+            else if (t.tur == Tokenlar.Metin)
+                donus = new Metin(t.deger);
+            else if (t.tur == Tokenlar.Tanim)
+                donus = new Tanim(t.deger);
+            else if (t.tur == Tokenlar.ParantezAc)
+            {
+                Ifade i = ifadeParseEt();
+                tl.IleriGit();
+                donus = new ParantezIfadesi(i);
+            }
+            if (tl.Gozat().tur == Tokenlar.Arti ||
+                tl.Gozat().tur == Tokenlar.Eksi ||
+                tl.Gozat().tur == Tokenlar.Carpi ||
+                tl.Gozat().tur == Tokenlar.Bolu)
+            {
+                Ifade solIfade = donus;
+                Tokenlar islem = tl.TokenAl().tur;
+                Ifade sagIfade = ifadeParseEt();
+                donus = new MatematikIfadesi(solIfade, islem, sagIfade);
+            }
+            return donus;
         }
 
         private Fonksiyon fonksiyonParseEt()
         {
-            throw new NotImplementedException();
+            string ad = tl.TokenAl().deger;
+            tl.IleriGit();
+            List<string> parametreler = new List<string>();
+            if (tl.Gozat().tur == Tokenlar.ParantezKapat)
+                tl.IleriGit();
+            else
+                parametreler = parametreParseEt();
+            return new Fonksiyon(ad, parametreler);
+        }
+
+        private List<string> parametreParseEt()
+        {
+            List<string> parametreler = new List<string>();
+            while (true)
+            {
+                Token t = tl.TokenAl();
+                if (t.tur == Tokenlar.Tanim)
+                    parametreler.Add(t.deger);
+                if (tl.Gozat().tur == Tokenlar.Virgul)
+                    tl.IleriGit();
+                else if (tl.Gozat().tur == Tokenlar.ParantezKapat)
+                {
+                    tl.IleriGit();
+                    break;
+                }
+            }
+            return parametreler;
         }
 
         private void eklentiParseEt()
         {
-            throw new NotImplementedException();
+            eklentiler.Add(tl.TokenAl().deger);
         }
     }
 }
