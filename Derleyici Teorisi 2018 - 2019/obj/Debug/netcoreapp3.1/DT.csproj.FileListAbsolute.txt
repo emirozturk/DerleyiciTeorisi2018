@@ -1,0 +1,13 @@
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\bin\Debug\netcoreapp3.1\DT.exe
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\bin\Debug\netcoreapp3.1\DT.deps.json
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\bin\Debug\netcoreapp3.1\DT.runtimeconfig.json
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\bin\Debug\netcoreapp3.1\DT.runtimeconfig.dev.json
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\bin\Debug\netcoreapp3.1\DT.dll
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\bin\Debug\netcoreapp3.1\DT.pdb
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\obj\Debug\netcoreapp3.1\DT.csproj.CoreCompileInputs.cache
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\obj\Debug\netcoreapp3.1\DT.AssemblyInfoInputs.cache
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\obj\Debug\netcoreapp3.1\DT.AssemblyInfo.cs
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\obj\Debug\netcoreapp3.1\DT.dll
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\obj\Debug\netcoreapp3.1\DT.pdb
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\obj\Debug\netcoreapp3.1\DT.genruntimeconfig.cache
+C:\Users\emiro\Desktop\Derleyici Teorisi 2018 - 2019\Derleyici Teorisi 2018 - 2019\obj\Debug\netcoreapp3.1\DT.csprojAssemblyReference.cache

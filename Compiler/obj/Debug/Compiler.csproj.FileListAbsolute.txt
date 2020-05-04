@@ -1,7 +1,0 @@
-C:\Users\emirozturk\Desktop\Compiler\Compiler\bin\Debug\Compiler.exe.config
-C:\Users\emirozturk\Desktop\Compiler\Compiler\bin\Debug\Compiler.exe
-C:\Users\emirozturk\Desktop\Compiler\Compiler\bin\Debug\Compiler.pdb
-C:\Users\emirozturk\Desktop\Compiler\Compiler\obj\Debug\Compiler.csprojResolveAssemblyReference.cache
-C:\Users\emirozturk\Desktop\Compiler\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
-C:\Users\emirozturk\Desktop\Compiler\Compiler\obj\Debug\Compiler.exe
-C:\Users\emirozturk\Desktop\Compiler\Compiler\obj\Debug\Compiler.pdb

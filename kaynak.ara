@@ -1,0 +1,23 @@
+$Main
+PushTamsayi 5
+PushTamsayi 5
+PushTamsayi 2
+Carp
+Topla
+DegiskenAta x
+PushTamsayi 11
+DegiskenAta y
+PushTanim y
+PushTanim x
+Cagir yazdir
+don
+$yazdir
+DegiskenAta a
+DegiskenAta b
+PushTanim a
+PushTanim b
+Topla
+Cagir EkranaYazdir
+$EkranaYazdir
+print
+don
