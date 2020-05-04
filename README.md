@@ -6,5 +6,5 @@ Başlangıçta verilen paketlerin ara kod dosyasına eklenebilmesi için paket i
 
 Oluşturulan ara kodun çalıştırılması için:
 ```
-Çalıştır.exe dosyaYolu
+Calistir.exe dosyaYolu
 ```
